@@ -1,25 +1,60 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "zorro_sign_contacts",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "zorro_sign_contacts (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "zorro_sign_contacts (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ZORRO-SIGN-CONTACTS-DEV-ALL",
+      "preLaunchTask": "FLUTTER-LAUNCH-DEV-ALL",
+      "type": "dart",
+      "flutterMode": "debug"
+    },
+    {
+      "name": "ZORRO-SIGN-CONTACTS-QA-ALL",
+      "preLaunchTask": "FLUTTER-LAUNCH-QA-ALL",
+      "type": "dart",
+      "flutterMode": "debug"
+    },
+    {
+      "name": "ZORRO-SIGN-CONTACTS-UAT-ALL",
+      "preLaunchTask": "FLUTTER-LAUNCH-UAT-ALL",
+      "type": "dart",
+      "flutterMode": "debug"
+    },
+    {
+      "name": "ZORRO-SIGN-CONTACTS-PROD-ALL",
+      "preLaunchTask": "FLUTTER-LAUNCH-PROD-ALL",
+      "type": "dart",
+      "flutterMode": "debug"
+    },
+    {
+      "name": "ZORRO-SIGN-CONTACTS-DEV",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_dev.dart",
+      "args": ["--flavor", "dev"]
+    },
+    {
+      "name": "ZORRO-SIGN-CONTACTS-QA",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_qa.dart",
+      "args": ["--flavor", "qa"]
+    },
+    {
+      "name": "ZORRO-SIGN-CONTACTS-UAT",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_uat.dart",
+      "args": ["--flavor", "uat"]
+    },
+    {
+      "name": "ZORRO-SIGN-CONTACTS-PROD",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_prod.dart",
+      "args": ["--flavor", "prod"]
+    }
+  ]
 }
