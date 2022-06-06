@@ -37,15 +37,18 @@ class ThemeConfig extends BaseThemeConfig {
   @override
   ThemeData theme(Locale? locale) {
     return ThemeData(
-      brightness: Brightness.light,
-      primaryColor: colors.primaryColor,
-      primarySwatch: colors.primarySwatch,
-      appBarTheme: componentsThemeData.appBarTheme,
-      fontFamily: getFontFamily(locale),
-      textTheme: textThemes.textTheme,
-      primaryTextTheme: textThemes.primaryTextTheme,
-      typography: textThemes.typography,
-    );
+        brightness: Brightness.light,
+        primaryColor: colors.primaryColor,
+        primarySwatch: colors.primarySwatch,
+        appBarTheme: componentsThemeData.appBarTheme,
+        fontFamily: getFontFamily(locale),
+        textTheme: textThemes.textTheme,
+        primaryTextTheme: textThemes.primaryTextTheme,
+        typography: textThemes.typography,
+        bottomNavigationBarTheme: componentsThemeData.bottomNavigationBarTheme,
+        tabBarTheme: componentsThemeData.tabBarTheme,
+        floatingActionButtonTheme:
+            componentsThemeData.floatingActionButtonTheme);
   }
 
   String getFontFamily(Locale? locale) {

@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:zorro_sign_contacts/flavour_config.dart';
 import 'package:zorro_sign_contacts/injection_container.dart';
@@ -43,6 +44,10 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ]);
     return MultiProvider(
       providers: [
         Provider<ThemeStore>(create: (_) => ts),

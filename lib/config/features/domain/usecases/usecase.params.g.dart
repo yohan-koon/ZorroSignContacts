@@ -8,7 +8,7 @@ part of 'usecase.params.dart';
 
 UsecaseParams _$UsecaseParamsFromJson(Map<String, dynamic> json) =>
     UsecaseParams(
-      classIdentifier: json['classIdentifier'] as String?,
+      classIdentifier: json['classIdentifier'] as String? ?? 'UsecaseParams',
     );
 
 Map<String, dynamic> _$UsecaseParamsToJson(UsecaseParams instance) =>

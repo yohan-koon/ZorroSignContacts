@@ -12,5 +12,8 @@ class FlavourConfig {
   //Request Headers
   Map<String, String>? publicRequestHeader;
 
+  //Request Headers
+  Map<String, String>? formSubmissionRequestHeader;
+
   FlavourConfig();
 }

@@ -4,7 +4,6 @@ import 'package:finap_base_theme/theme_color_variation.dart';
 import 'package:finap_extensions/color_extension.dart';
 import 'package:flutter/material.dart';
 
-
 class Colors extends BaseColors {
   @override
   ThemeColorVariation themeColorVariation = ThemeColorVariation(
@@ -23,8 +22,8 @@ class Colors extends BaseColors {
       info: Palette.WHITE);
 
   @override
-  MaterialColor primarySwatch = Palette.RED
-      .createMaterialColor(); //Palette.green.createMaterialColor();
+  MaterialColor primarySwatch =
+      Palette.GREY.createMaterialColor(); //Palette.green.createMaterialColor();
 
   @override
   Brightness? accentColorBrightness;

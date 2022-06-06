@@ -3,11 +3,8 @@ import 'package:zorro_sign_contacts/core/data/datasources/local/injection_contai
     as local_di;
 import 'package:zorro_sign_contacts/core/data/datasources/remote/injection_container.dart'
     as remote_di;
-import 'package:zorro_sign_contacts/core/data/datasources/firestore/injection_container.dart'
-    as firestore_di;
 
 Future<void>? setup(GetIt di) async {
   local_di.setup(di);
   remote_di.setup(di);
-  firestore_di.setup(di);
 }
