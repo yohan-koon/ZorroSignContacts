@@ -9,12 +9,16 @@ void main() {
       ServerEndPoints.baseUrl:
           'https://happyexam.net:8081',
       ServerEndPoints.apiGateway:
-          'https://mentoringplatform-apigateway-dev.azurewebsites.net/api'
+          'https://happyexam.net:8081/api'
     }
     ..endPoints = EndPoints()
     ..publicRequestHeader = {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
+    }
+    ..formSubmissionRequestHeader = {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json-patch+json'
     };
 
   mainCommon(devConfig);

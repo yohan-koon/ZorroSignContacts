@@ -1,5 +1,6 @@
 import 'package:finap_base_theme/base_components_theme_data.dart';
 import 'package:finap_base_theme/palette.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:zorro_sign_contacts/theme/theme_values/zorro_contacts_theme/dimensions.dart';
 import 'package:zorro_sign_contacts/theme/theme_values/zorro_contacts_theme/colors.dart'
     as theme_colors;
@@ -29,8 +30,9 @@ class ComponentsThemeData extends BaseComponentsThemeData {
     return const AppBarTheme(
         centerTitle: true,
         backgroundColor: Palette.WHITE,
-        iconTheme: IconThemeData(color: Palette.RED),
-        toolbarTextStyle: TextStyle());
+        iconTheme: IconThemeData(color: Palette.BLACK),
+        toolbarTextStyle: TextStyle(),
+        actionsIconTheme: IconThemeData(color: Palette.GREEN));
   }
 
   @override
@@ -45,7 +47,12 @@ class ComponentsThemeData extends BaseComponentsThemeData {
 
   @override
   BottomNavigationBarThemeData? get bottomNavigationBarTheme {
-    return const BottomNavigationBarThemeData();
+    return const BottomNavigationBarThemeData(
+        selectedIconTheme: IconThemeData(color: Palette.GREEN),
+        unselectedIconTheme: IconThemeData(color: Palette.GREY),
+        selectedItemColor: Palette.BLACK,
+        elevation: 0,
+        backgroundColor: Palette.WHITE);
   }
 
   @override
@@ -100,7 +107,11 @@ class ComponentsThemeData extends BaseComponentsThemeData {
 
   @override
   FloatingActionButtonThemeData? get floatingActionButtonTheme {
-    return null;
+    return FloatingActionButtonThemeData(
+        backgroundColor: Palette.GREEN,
+        foregroundColor: Palette.WHITE,
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.w)));
   }
 
   @override
@@ -175,7 +186,22 @@ class ComponentsThemeData extends BaseComponentsThemeData {
 
   @override
   TabBarTheme? get tabBarTheme {
-    return null;
+    return TabBarTheme(
+      labelStyle:
+          textThemes.primaryTextTheme?.bodySmall?.copyWith(fontSize: 15.sp),
+      unselectedLabelStyle:
+          textThemes.primaryTextTheme?.bodySmall?.copyWith(fontSize: 15.sp),
+      labelPadding: EdgeInsets.zero,
+      labelColor: Palette.BLACK,
+      indicator: const BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+            color: Palette.GREEN,
+            width: 4.0,
+          ),
+        ),
+      ),
+    );
   }
 
   @override
